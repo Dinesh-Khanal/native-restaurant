@@ -3,6 +3,8 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as Icon from "react-native-feather";
+import { themeColors } from "../theme";
+import Categories from "../components/categories";
 
 export default function HomeScreen() {
   return (
@@ -22,7 +24,7 @@ export default function HomeScreen() {
           </View>
         </View>
         <View
-          style={{ backgroundColor: "orange" }}
+          style={{ backgroundColor: themeColors.bgColor(1) }}
           className="p-3 rounded-full "
         >
           <Icon.Sliders
@@ -34,13 +36,10 @@ export default function HomeScreen() {
         </View>
       </View>
       <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        className="flex-row space-x-8 overflow-visible pl-4 pb-2"
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 20 }}
       >
-        <Text>Bean</Text>
-        <Text>Bean</Text>
-        <Text>Bean</Text>
+        <Categories />
       </ScrollView>
     </SafeAreaView>
   );
