@@ -5,6 +5,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import * as Icon from "react-native-feather";
 import { themeColors } from "../theme";
 import Categories from "../components/categories";
+import FeaturedRow from "../components/featuredRow";
+import { featured } from "../constants";
 
 export default function HomeScreen() {
   return (
@@ -41,6 +43,11 @@ export default function HomeScreen() {
       >
         <Categories />
       </ScrollView>
+      <FeaturedRow
+        title={featured.title}
+        description={featured.description}
+        restaurants={featured.restaurants}
+      />
     </SafeAreaView>
   );
 }
