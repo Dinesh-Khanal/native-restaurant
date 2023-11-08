@@ -7,11 +7,13 @@ import { useRoute } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { themeColors } from "../theme";
+import CartIcon from "../components/cart-icon";
 import DishRow from "../components/Dish-row";
 
 export default function RestaurantScreen() {
   const navigation = useNavigation();
   const { params: item } = useRoute();
+
   return (
     <SafeAreaView>
       <StatusBar barStyle="dark-content" />
@@ -65,6 +67,7 @@ export default function RestaurantScreen() {
           </View>
         </ScrollView>
       </View>
+      <CartIcon />
     </SafeAreaView>
   );
 }
