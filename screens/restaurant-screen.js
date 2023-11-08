@@ -11,9 +11,7 @@ import DishRow from "../components/Dish-row";
 
 export default function RestaurantScreen() {
   const navigation = useNavigation();
-  const {
-    params: { item },
-  } = useRoute();
+  const { params: item } = useRoute();
   return (
     <SafeAreaView>
       <StatusBar barStyle="dark-content" />
@@ -33,7 +31,7 @@ export default function RestaurantScreen() {
             className="bg-white -mt-12 pt-6"
           >
             <View className="px-5">
-              <Text className="text-3xl font-bold">{item.title}</Text>
+              <Text className="text-3xl font-bold">{item.name}</Text>
               <View className="flex-row space-x-2 my-1">
                 <View className="flex-row items-center space-x-1">
                   <Image

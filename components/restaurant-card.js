@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 export default function RestaurantCard({ item }) {
   const navigation = useNavigation();
   return (
-    <Pressable onPress={() => navigation.navigate("Restaurant", { item })}>
+    <Pressable onPress={() => navigation.navigate("Restaurant", item)}>
       <View className="px-4 py-2">
         <Image className="h-36 w-64 rounded-t-3xl" source={item.image} />
         <View className="flex-row items-center space-x-1">
