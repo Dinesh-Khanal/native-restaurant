@@ -1,6 +1,6 @@
 import { View, Text, TextInput, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as Icon from "react-native-feather";
 import { themeColors } from "../theme";
